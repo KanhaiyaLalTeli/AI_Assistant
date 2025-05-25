@@ -87,7 +87,7 @@ function App() {
 
   return (
     <div className={`${darkMode === 'dark' ? 'dark' : 'light'}`}>
-    <div className="w-screen text-center flex h-screen overflow-hidden">
+    <div className="w-screen text-center flex h-screen">
       <div className="w-2/12 dark:bg-zinc-800 bg-red-100 h-screen">
         <RecentHistory
           handleDeleteHistory={handleDeleteHistory}
@@ -95,7 +95,7 @@ function App() {
           setSearchFromHistory={setSearchFromHistory}
         />
         <select
-          className="fixed bottom-2/12 text-white left-0 bg-zinc-800"
+          className="fixed bottom-10 text-white left-0 bg-zinc-800"
           onChange={(e) => setDarkMode(e.target.value)}
         >
           <option value="dark">Dark</option>
