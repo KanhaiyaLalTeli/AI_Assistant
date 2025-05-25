@@ -86,9 +86,9 @@ function App() {
   },[darkMode])
 
   return (
-    <div className={darkMode=='dark' ? 'dark' : 'light'}>
+    <div className={`${darkMode === 'dark' ? 'dark' : 'light'}`}>
     <div className="w-screen text-center flex h-screen">
-      <div className="w-2/12 dark:bg-zinc-800 bg-red-100">
+      <div className="w-2/12 dark:bg-zinc-800 bg-red-100 h-screen">
         <RecentHistory
           handleDeleteHistory={handleDeleteHistory}
           recentHistory={recentHistory}
