@@ -87,8 +87,8 @@ function App() {
 
   return (
     <div className={darkMode=='dark' ? 'dark' : 'light'}>
-    <div className="w-screen h-screen text-center flex">
-      <div className="w-2/12 dark:bg-zinc-800 bg-red-100 h-screen">
+    <div className="w-screen text-center flex h-screen">
+      <div className="w-2/12 dark:bg-zinc-800 bg-red-100">
         <RecentHistory
           handleDeleteHistory={handleDeleteHistory}
           recentHistory={recentHistory}
@@ -102,7 +102,7 @@ function App() {
           <option value="light">Light</option>
         </select>
       </div>
-      <div className="w-10/12 mx-auto h-screen">
+      <div className="w-10/12 mx-auto">
         <div className="h-1/12">
           <h1 className="text-xl sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700 p-1 font-bold">
             Hello User, Ask me Anything
