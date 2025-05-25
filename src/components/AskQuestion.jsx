@@ -9,7 +9,7 @@ const AskQuestion = ({question,setQuestion,handleQuestion}) => {
       };
 
   return (
-    <div className="h-1/12 sm:h-1/12 w-10/12 sm:w-1/2 mx-auto my-2 sm:my-10">
+    <div className="h-1/12 w-10/12 sm:w-1/2 mx-auto">
           <div className="dark:bg-zinc-800 bg-red-100 pr-5  dark:text-white text-zinc-800 rounded-4xl border border-zinc-700  flex h-12 sm:h-16">
             <input
               type="text"
