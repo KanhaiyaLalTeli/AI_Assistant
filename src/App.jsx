@@ -88,14 +88,14 @@ function App() {
   return (
     <div className={darkMode=='dark' ? 'dark' : 'light'}>
     <div className="w-screen h-screen text-center flex">
-      <div className="w-2/12 dark:bg-zinc-800 bg-red-100 ">
+      <div className="w-2/12 dark:bg-zinc-800 bg-red-100 h-screen">
         <RecentHistory
           handleDeleteHistory={handleDeleteHistory}
           recentHistory={recentHistory}
           setSearchFromHistory={setSearchFromHistory}
         />
         <select
-          className="mb-5 fixed bottom-0 text-white left-0 sm:m-4 bg-zinc-800 ml-1"
+          className="fixed bottom-0 text-white left-0 bg-zinc-800"
           onChange={(e) => setDarkMode(e.target.value)}
         >
           <option value="dark">Dark</option>
