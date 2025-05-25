@@ -94,13 +94,13 @@ function App() {
           recentHistory={recentHistory}
           setSearchFromHistory={setSearchFromHistory}
         />
-        <select
+        {/* <select
           className="fixed bottom-0 text-white left-0 bg-zinc-800"
           onChange={(e) => setDarkMode(e.target.value)}
         >
           <option value="dark">Dark</option>
           <option value="light">Light</option>
-        </select>
+        </select> */}
       </div>
       <div className="w-10/12">
         <div className="h-1/12 sm:h-1/12">
