@@ -88,21 +88,21 @@ function App() {
   return (
     <div className={darkMode=='dark' ? 'dark' : 'light'}>
     <div className="w-screen h-screen text-center flex">
-      <div className="w-2/12 dark:bg-zinc-800 bg-red-100 h-screen">
+      {/* <div className="w-2/12 dark:bg-zinc-800 bg-red-100 h-screen">
         <RecentHistory
           handleDeleteHistory={handleDeleteHistory}
           recentHistory={recentHistory}
           setSearchFromHistory={setSearchFromHistory}
         />
-        {/* <select
+        <select
           className="fixed bottom-0 text-white left-0 bg-zinc-800"
           onChange={(e) => setDarkMode(e.target.value)}
         >
           <option value="dark">Dark</option>
           <option value="light">Light</option>
-        </select> */}
-      </div>
-      <div className="w-10/12">
+        </select>
+      </div> */}
+      <div className="w-10/12 mx-auto">
         <div className="h-1/12 sm:h-1/12">
           <h1 className="text-xl sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-700 to-violet-700 p-1 font-bold">
             Hello User, Ask me Anything
