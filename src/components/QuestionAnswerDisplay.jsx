@@ -6,7 +6,7 @@ const QuestionAnswerDisplay = ({scrollToAns,result}) => {
   return (
        <div
           ref={scrollToAns}
-          className="h-9/12 overflow-scroll hide-scrollbar"
+          className="h-8/12 overflow-scroll hide-scrollbar"
         >
           <div className="text-white p-2">
             <ul>
