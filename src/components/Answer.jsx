@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import SyntaxHighlighter from 'react-syntax-highlighter';
 import { dark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import ReactMarkdown from 'react-markdown';
 import { checkHeading, replaceHeading } from '../helper';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+
 
 const Answer = ({ ans, index, ansCount }) => {
   const [heading, setHeading] = useState(false);
@@ -25,14 +26,16 @@ const Answer = ({ ans, index, ansCount }) => {
     code({ node, inline, className, children, ...props }) {
       const match = /language-(\w+)/.exec(className || '');
       return !inline && match ? (
+       
         <SyntaxHighlighter
-          style={dark}
+          style={dark }
           language={match[1]}
           PreTag="div"
           {...props}
         >
           {String(children).replace(/\n$/, '')}
         </SyntaxHighlighter>
+        
       ) : (
         <code {...props} className={className}>
           {children}

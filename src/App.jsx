@@ -24,7 +24,10 @@ function App() {
     if (question) {
       if (localStorage.getItem("history")) {
         let history = JSON.parse(localStorage.getItem("history"));
+        history=history.slice(0,19);
         history = [question, ...history];
+        history = history.map((item)=> item.charAt(0).toUpperCase()+item.slice(1).trim());
+        history=[...new Set(history)];
         localStorage.setItem("history", JSON.stringify(history));
         setRecentHistory(history);
       } else {
@@ -44,6 +47,7 @@ function App() {
     };
 
     setLoader(true);
+    setQuestion("");
 
     const response = await fetch(URL, {
       method: "POST",
@@ -59,17 +63,12 @@ function App() {
   { type: "q", text: payloadData },
   { type: "a", text: dataString },
 ]);
-    setQuestion("");
+    
 
     setTimeout(() => {
       scrollToAns.current.scrollTop = scrollToAns.current.scrollHeight;
     }, 500);
     setLoader(false);
-  };
-
-  const handleDeleteHistory = () => {
-    localStorage.clear();
-    setRecentHistory([]);
   };
 
   useEffect(() => {
@@ -90,9 +89,9 @@ function App() {
     <div className="w-screen text-center flex h-screen">
       <div className="hidden sm:block w-2/12 dark:bg-zinc-800 bg-red-100 h-screen">
         <RecentHistory
-          handleDeleteHistory={handleDeleteHistory}
           recentHistory={recentHistory}
           setSearchFromHistory={setSearchFromHistory}
+          setRecentHistory={setRecentHistory}
         />
         <select
           className="fixed bottom-0 text-white left-0 bg-zinc-800 m-4"
